@@ -27,6 +27,12 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WEB_RedLaboral", "WEB_RedLa
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL_RedLaboral", "SQL_RedLaboral", "{77746440-329E-4AD5-91F4-BF217423A8B5}"
+	ProjectSection(SolutionItems) = preProject
+		01_tables.sql = 01_tables.sql
+		02_store_procedure.sql = 02_store_procedure.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

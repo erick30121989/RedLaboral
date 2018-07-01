@@ -14,6 +14,7 @@ namespace WCF_RedLaboral
     {
         public string GetData(int value)
         {
+            //DEMO 12345
             return string.Format("You entered: {0}", value);
         }
 
