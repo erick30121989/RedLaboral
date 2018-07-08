@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using System.Data;
 
 namespace WCF_RedLaboral
 {
@@ -12,6 +13,18 @@ namespace WCF_RedLaboral
     public interface IServicioDistrito
     {
         [OperationContract]
-        void DoWork();
+        DataSet ListarDepartamento();
+
+        [OperationContract]
+        DataSet ListarProvincia(String departamento);
+
+        [OperationContract]
+        DataSet ListarDistrito(String provincia);
+
+        [OperationContract]
+        String ObtenerDepartamento(Int32 IdDistrito);
+
+        [OperationContract]
+        String ObtenerProvincia(Int32 IdDistrito);
     }
 }
