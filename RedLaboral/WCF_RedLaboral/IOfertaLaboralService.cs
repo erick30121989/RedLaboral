@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using WCF_RedLaboral.Dominio;
 
 namespace WCF_RedLaboral
 {
@@ -11,6 +12,6 @@ namespace WCF_RedLaboral
     public interface IOfertaLaboralService
     {
         [OperationContract]
-        void DoWork();
+        OfertaLaboral CrearOfertaLaboral(OfertaLaboral ofertaLaboralACrear);
     }
 }

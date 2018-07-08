@@ -7,6 +7,6 @@ namespace WCF_RedLaboral
 {
     public class Conexion
     {
-        public static String strConn = "server=.;database=RED_LABORAL;user id=sa;password=Dell2017";
+        public static String strConn = "Data Source=UL-AHUAMAN;Initial Catalog=RED_LABORAL;Integrated Security=True;";
     }
 }

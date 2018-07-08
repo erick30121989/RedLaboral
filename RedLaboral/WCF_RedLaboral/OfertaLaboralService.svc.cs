@@ -4,15 +4,33 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using WCF_RedLaboral.Dominio;
+using WCF_RedLaboral.Errores;
+using WCF_RedLaboral.Persistencia;
 
 namespace WCF_RedLaboral
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "OfertaLaboralService" in code, svc and config file together.
-    // NOTE: In order to launch WCF Test Client for testing this service, please select OfertaLaboralService.svc or OfertaLaboralService.svc.cs at the Solution Explorer and start debugging.
     public class OfertaLaboralService : IOfertaLaboralService
     {
-        public void DoWork()
+        private OfertaLaboralDAO ofertaLaboralDAO = new OfertaLaboralDAO();
+        public OfertaLaboral CrearOfertaLaboral(OfertaLaboral ofertaLaboralACrear)
         {
+            if (ofertaLaboralDAO.Obtener(ofertaLaboralACrear.idOfertaLaboral) != null)
+            {
+                throw new FaultException<OfertaLaboralException>(
+                    new OfertaLaboralException()
+                    {
+                        Codigo = "101",
+                        Descripcion = "Oferta Laboral ya existe"
+                    },
+                    new FaultReason("Error al intentar creación"));
+            }
+            return ofertaLaboralDAO.Crear(ofertaLaboralACrear);
+        }
+        
+        public OfertaLaboral ObtenerOfertaLaboral(int idOfertaLaboral)
+        {
+            return ofertaLaboralDAO.Obtener(idOfertaLaboral);
         }
     }
 }
