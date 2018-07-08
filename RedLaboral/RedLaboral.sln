@@ -26,12 +26,20 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WEB_RedLaboral", "WEB_RedLa
 		SlnRelativePath = "WEB_RedLaboral\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{3BCC7C3F-C1F7-4BE3-B102-380DB2094E25} = {3BCC7C3F-C1F7-4BE3-B102-380DB2094E25}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL_RedLaboral", "SQL_RedLaboral", "{77746440-329E-4AD5-91F4-BF217423A8B5}"
 	ProjectSection(SolutionItems) = preProject
 		01_tables.sql = 01_tables.sql
 		02_store_procedure.sql = 02_store_procedure.sql
 		03_data.sql = 03_data.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DLL_RedlLaboral", "DLL_RedlLaboral", "{A12B3E46-D8EC-4480-93C8-295F828BFD50}"
+	ProjectSection(SolutionItems) = preProject
+		AjaxControlToolkit.dll = AjaxControlToolkit.dll
 	EndProjectSection
 EndProject
 Global
