@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using System.Data;
 
 namespace WCF_RedLaboral
 {
@@ -12,6 +13,12 @@ namespace WCF_RedLaboral
     public interface IServicioHabilidadBlanda
     {
         [OperationContract]
-        void DoWork();
+        DataSet ListarHabilidadBlanda();
+
+        [OperationContract]
+        DataSet ListarRubroHabilidadBlanda();
+
+        [OperationContract]
+        DataSet ListarHabilidadBlandaxRubro(String nombre_rubro);
     }
 }
