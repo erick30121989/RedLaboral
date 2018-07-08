@@ -15,7 +15,7 @@ namespace WCF_RedLaboral
     {
         SqlConnection cnx = new SqlConnection();
         string strConn = Conexion.strConn;
-        SqlCommand cmd = new SqlCommand();
+        SqlCommand cmd = new SqlCommand();      
 
         public bool ActualizarContraseña(EmpresaBE objEmpresaBE)
         {

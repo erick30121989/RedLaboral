@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using System.Data;
 
 namespace WCF_RedLaboral
 {
@@ -12,6 +13,9 @@ namespace WCF_RedLaboral
     public interface IServicioPuesto
     {
         [OperationContract]
-        void DoWork();
+        DataSet ListarRubro();
+
+        [OperationContract]
+        DataSet ListarPuestoRubro(String rubro);
     }
 }
