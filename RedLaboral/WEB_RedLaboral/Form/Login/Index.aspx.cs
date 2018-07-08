@@ -29,6 +29,7 @@ public partial class Form_Login_Index : System.Web.UI.Page
             {
                 mensaje = "INGRESE USUARIO Y CONTRASEÑA";
                 throw new Exception(mensaje);
+                //sfsdfassd
                 //System.Web.HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=''JavaScript''>alert('" + "INGRESE USUARIO Y CONTRASEÑA" + "')</SCRIPT>");
             }
 
