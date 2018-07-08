@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -13,6 +14,26 @@ namespace WCF_RedLaboral
     {
         public void DoWork()
         {
+        }
+
+        public bool InsertarPuntuacionDura(PuntuacionDuraBE objPuntBlanda)
+        {
+            throw new NotImplementedException();
+        }
+
+        public DataSet ListarPersonasPuntosHDura(int puntos, int id_habilidad)
+        {
+            throw new NotImplementedException();
+        }
+
+        public DataSet ListarPuntuacionDuraPersona(int id_trabajo)
+        {
+            throw new NotImplementedException();
+        }
+
+        public DataSet ListarPuntuacionDuraPersonaDetalles(string dni, int id_habilidad)
+        {
+            throw new NotImplementedException();
         }
     }
 }

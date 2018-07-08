@@ -82,5 +82,5 @@ namespace WCF_RedLaboral
             set { _estado = value; }
         }
 
-    }s
+    }
 }
