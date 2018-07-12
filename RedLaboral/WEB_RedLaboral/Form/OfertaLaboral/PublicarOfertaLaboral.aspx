@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="PublicarOferta.aspx.cs" Inherits="Form_OfertaLaboral_PublicarOferta" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="PublicarOfertaLaboral.aspx.cs" Inherits="Form_OfertaLaboral_PublicarOferta" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server">
 </asp:Content>
@@ -49,30 +49,40 @@
         <tr>
             <td>Descripción:</td>
             <td colspan="3">
-                <textarea id="txaDescripcion" cols="20" name="S1" rows="2"></textarea></td>
+                <asp:TextBox ID="txtDescripcion" runat="server" TextMode="MultiLine"></asp:TextBox>
+            </td>
         </tr>
         <tr>
             <td>Funciones:</td>
             <td colspan="3">
-                <textarea id="txaFunciones" cols="20" name="S2" rows="2"></textarea></td>
+                <asp:TextBox ID="txtFunciones" runat="server" TextMode="MultiLine"></asp:TextBox>
+            </td>
         </tr>
         <tr>
             <td>Requisitos:</td>
             <td colspan="3">
-                <textarea id="txaRequisitos" cols="20" name="S3" rows="2"></textarea></td>
+                <asp:TextBox ID="txtRequisitos" runat="server" TextMode="MultiLine"></asp:TextBox>
+            </td>
         </tr>
         <tr>
             <td>Competencias:</td>
             <td colspan="3">
-                <textarea id="txaCompetencias" cols="20" name="S4" rows="2"></textarea></td>
+                <asp:TextBox ID="txtCompetencias" runat="server" TextMode="MultiLine"></asp:TextBox>
+            </td>
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
             <td>
-                <asp:Button ID="btnEnviar" runat="server" Text="Enviar" />
+                <asp:Button ID="btnEnviar" runat="server" Text="Grabar" OnClick="btnEnviar_Click" />
             </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td colspan="2">
+                <asp:Label ID="lblResultado" runat="server" Text=""></asp:Label></td>
         </tr>
     </table>
 </asp:Content>
