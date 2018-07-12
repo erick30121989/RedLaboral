@@ -33,7 +33,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL_RedLaboral", "SQL_RedLaboral", "{77746440-329E-4AD5-91F4-BF217423A8B5}"
 	ProjectSection(SolutionItems) = preProject
 		01_tables.sql = 01_tables.sql
+		01_tables_ahuaman.sql = 01_tables_ahuaman.sql
 		02_store_procedure.sql = 02_store_procedure.sql
+		02_stored_procedures_ahuaman.sql = 02_stored_procedures_ahuaman.sql
 		03_data.sql = 03_data.sql
 	EndProjectSection
 EndProject

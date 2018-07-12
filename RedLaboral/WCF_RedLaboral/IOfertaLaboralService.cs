@@ -13,5 +13,8 @@ namespace WCF_RedLaboral
     {
         [OperationContract]
         OfertaLaboral CrearOfertaLaboral(OfertaLaboral ofertaLaboralACrear);
+
+        [OperationContract]
+        AplicacionOfertaLaboral AplicarOfertaLaboral(AplicacionOfertaLaboral aplicacionOfertaLaboralACrear);
     }
 }

@@ -13,6 +13,7 @@ namespace WCF_RedLaboral
     public class OfertaLaboralService : IOfertaLaboralService
     {
         private OfertaLaboralDAO ofertaLaboralDAO = new OfertaLaboralDAO();
+
         public OfertaLaboral CrearOfertaLaboral(OfertaLaboral ofertaLaboralACrear)
         {
             if (ofertaLaboralDAO.Obtener(ofertaLaboralACrear.idOfertaLaboral) != null)
@@ -31,6 +32,11 @@ namespace WCF_RedLaboral
         public OfertaLaboral ObtenerOfertaLaboral(int idOfertaLaboral)
         {
             return ofertaLaboralDAO.Obtener(idOfertaLaboral);
+        }
+
+        AplicacionOfertaLaboral IOfertaLaboralService.AplicarOfertaLaboral(AplicacionOfertaLaboral aplicacionOfertaLaboralACrear)
+        {
+            throw new NotImplementedException();
         }
     }
 }
