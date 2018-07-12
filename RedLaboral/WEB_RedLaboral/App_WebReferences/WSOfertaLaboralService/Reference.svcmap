@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="201fde32-8e79-4765-833a-f3c47a9fac43" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:55953/OfertaLaboralService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="OfertaLaboralService.xsd" MetadataType="Schema" ID="ce98b8eb-20b1-4741-b043-d64ade5a7c8c" SourceId="1" SourceUrl="http://localhost:55953/OfertaLaboralService.svc?xsd=xsd1" />
+    <MetadataFile FileName="OfertaLaboralService.disco" MetadataType="Disco" ID="15ac9156-d54b-41fa-9579-705952a9d214" SourceId="1" SourceUrl="http://localhost:55953/OfertaLaboralService.svc?disco" />
+    <MetadataFile FileName="OfertaLaboralService.wsdl" MetadataType="Wsdl" ID="c7f8df44-c40d-4052-b5ca-1ca2ea77ed30" SourceId="1" SourceUrl="http://localhost:55953/OfertaLaboralService.svc?wsdl" />
+    <MetadataFile FileName="OfertaLaboralService1.xsd" MetadataType="Schema" ID="c6d521cf-12e9-4d59-9c70-6af987b52063" SourceId="1" SourceUrl="http://localhost:55953/OfertaLaboralService.svc?xsd=xsd2" />
+    <MetadataFile FileName="OfertaLaboralService2.xsd" MetadataType="Schema" ID="9abc41e3-83c0-4cea-8758-435d79d4f24c" SourceId="1" SourceUrl="http://localhost:55953/OfertaLaboralService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

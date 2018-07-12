@@ -76,9 +76,17 @@ public partial class Form_Login_Index : System.Web.UI.Page
 
     protected void btn_registrarse_Click1(object sender, EventArgs e)
     {
-
+        try
+        {
+            Response.Redirect("CrearCuenta.aspx");
+        }
+        catch (Exception ex)
+        {
+            System.Web.HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=''JavaScript''>alert('" + ex.Message + "')</SCRIPT>");
+        }
     }
 
+    //Metodo de validacion de correo
     bool validarCorreo(string correo)
     {
         try
