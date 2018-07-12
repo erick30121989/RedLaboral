@@ -9,15 +9,17 @@ public partial class Form_OfertaLaboral_PublicarOferta : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        ddlPuesto.SelectedIndex = 1;
-        ddlJornada.SelectedIndex = 1;
-        ddlTipoContrato.SelectedIndex = 1;
+
     }
 
     protected void btnEnviar_Click(object sender, EventArgs e)
     {
         try
         {
+            ddlPuesto.SelectedIndex = 1;
+            ddlJornada.SelectedIndex = 1;
+            ddlTipoContrato.SelectedIndex = 1;
+
             WSOfertaLaboralService.OfertaLaboralServiceClient proxy = new WSOfertaLaboralService.OfertaLaboralServiceClient();
             WSOfertaLaboralService.OfertaLaboral ofertaLaboralCreada = proxy.CrearOfertaLaboral(new WSOfertaLaboralService.OfertaLaboral()
             {
@@ -47,6 +49,7 @@ public partial class Form_OfertaLaboral_PublicarOferta : System.Web.UI.Page
                 txtRequisitos.Text = "";
                 txtCompetencias.Text = "";
 
+
                 lblResultado.Text = "Creación exitosa";
             }
             else
@@ -54,9 +57,9 @@ public partial class Form_OfertaLaboral_PublicarOferta : System.Web.UI.Page
                 lblResultado.Text = "Error en la creación";
             }
         }
-        catch (Exception ex)
+        catch
         {
-            lblResultado.Text = "Error en la creación";
+
         }
     }
 }
