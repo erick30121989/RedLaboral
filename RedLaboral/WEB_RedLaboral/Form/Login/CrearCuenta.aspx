@@ -40,16 +40,6 @@
         .auto-style7 {
             height: 25px;
         }
-        .auto-style9 {
-            height: 25px;
-            width: 231px;
-        }
-        .auto-style10 {
-            width: 231px;
-        }
-        .auto-style11 {
-            height: 26px;
-        }
         .auto-style13 {
             height: 26px;
             width: 230px;
@@ -74,6 +64,11 @@
         .auto-style18 {
             height: 25px;
             width: 226px;
+        }
+
+        .auto-style19 {
+            height: 25px;
+            margin-left: 40px;
         }
 
     </style>
@@ -119,7 +114,7 @@
             <tr>
                 <td class="auto-style17">*Nombres:</td>
                 <td>
-                    <asp:TextBox ID="TextBox1" runat="server" Width="300px"></asp:TextBox>
+                    <asp:TextBox ID="txNombre_P" runat="server" Width="300px"></asp:TextBox>
                 </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -130,7 +125,7 @@
             <tr>
                 <td class="auto-style17">*Apellido Paterno:</td>
                 <td>
-                    <asp:TextBox ID="TextBox2" runat="server" Width="300px"></asp:TextBox>
+                    <asp:TextBox ID="txtApellidoP_P" runat="server" Width="300px"></asp:TextBox>
                 </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -141,7 +136,7 @@
             <tr>
                 <td class="auto-style17">*Apellido Materno:</td>
                 <td>
-                    <asp:TextBox ID="TextBox3" runat="server" Width="300px"></asp:TextBox>
+                    <asp:TextBox ID="txtApellidoM_P" runat="server" Width="300px"></asp:TextBox>
                 </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -152,7 +147,7 @@
             <tr>
                 <td class="auto-style17">*Dni:</td>
                 <td>
-                    <asp:TextBox ID="TextBox4" runat="server" Width="300px"></asp:TextBox>
+                    <asp:TextBox ID="txtDni_P" runat="server" Width="300px"></asp:TextBox>
                 </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -163,8 +158,8 @@
             <tr>
                 <td class="auto-style17">*Fecha Nacimiento:</td>
                 <td>
-                    <asp:TextBox ID="TextBox5" runat="server" Width="200px"></asp:TextBox>
-                    <cc1:CalendarExtender ID="TextBox5_CalendarExtender" runat="server" BehaviorID="TextBox5_CalendarExtender" TargetControlID="TextBox5" Format="yyyy-MM-dd" />
+                    <asp:TextBox ID="txtFecha_P" runat="server" Width="200px"></asp:TextBox>
+                    <cc1:CalendarExtender ID="txtFecha_P_CalendarExtender" runat="server" BehaviorID="TextBox5_CalendarExtender" TargetControlID="txtFecha_P" Format="yyyy-MM-dd" />
                 </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -175,7 +170,7 @@
             <tr>
                 <td class="auto-style17">Telefono:</td>
                 <td>
-                    <asp:TextBox ID="TextBox6" runat="server" Width="200px"></asp:TextBox>
+                    <asp:TextBox ID="txtTelefono_P" runat="server" Width="200px"></asp:TextBox>
                 </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -186,7 +181,7 @@
             <tr>
                 <td class="auto-style17">Celular:</td>
                 <td>
-                    <asp:TextBox ID="TextBox7" runat="server" Width="200px"></asp:TextBox>
+                    <asp:TextBox ID="txtCelular_P" runat="server" Width="200px"></asp:TextBox>
                 </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -197,7 +192,7 @@
             <tr>
                 <td class="auto-style17">*Correo Electronico:</td>
                 <td>
-                    <asp:TextBox ID="TextBox8" runat="server" Width="300px"></asp:TextBox>
+                    <asp:TextBox ID="txtCorreo_P" runat="server" Width="300px"></asp:TextBox>
                 </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -208,7 +203,7 @@
             <tr>
                 <td class="auto-style17">Direccion:</td>
                 <td>
-                    <asp:TextBox ID="TextBox9" runat="server" Width="300px"></asp:TextBox>
+                    <asp:TextBox ID="txtDireccion_P" runat="server" Width="300px"></asp:TextBox>
                 </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -218,8 +213,8 @@
             </tr>
             <tr>
                 <td class="auto-style18">*Departamento:</td>
-                <td class="auto-style7">
-                    <asp:DropDownList ID="DropDownList1" runat="server" Width="200px">
+                <td class="auto-style19">
+                    <asp:DropDownList ID="cboDepartamento_P" runat="server" Width="200px">
                     </asp:DropDownList>
                 </td>
                 <td class="auto-style7"></td>
@@ -231,7 +226,7 @@
             <tr>
                 <td class="auto-style17">*Provincia:</td>
                 <td>
-                    <asp:DropDownList ID="DropDownList2" runat="server" Width="200px">
+                    <asp:DropDownList ID="cboProvincia_P" runat="server" Width="200px">
                     </asp:DropDownList>
                 </td>
                 <td>&nbsp;</td>
@@ -243,7 +238,7 @@
             <tr>
                 <td class="auto-style17">*Distrito:</td>
                 <td>
-                    <asp:DropDownList ID="DropDownList3" runat="server" Width="200px">
+                    <asp:DropDownList ID="cboDistrito_P" runat="server" Width="200px">
                     </asp:DropDownList>
                 </td>
                 <td>&nbsp;</td>
@@ -284,7 +279,7 @@
             <tr>
                 <td class="auto-style17">Contraseña:</td>
                 <td>
-                    <asp:TextBox ID="TextBox10" runat="server" Width="200px"></asp:TextBox>
+                    <asp:TextBox ID="txtContrasena_P" runat="server" Width="200px"></asp:TextBox>
                 </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -295,7 +290,7 @@
             <tr>
                 <td class="auto-style17">Repetir Contraseña:</td>
                 <td>
-                    <asp:TextBox ID="TextBox11" runat="server" Width="200px"></asp:TextBox>
+                    <asp:TextBox ID="txtContrasena2_P" runat="server" Width="200px"></asp:TextBox>
                 </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -361,7 +356,7 @@
                 <tr>
                     <td class="auto-style15">*Razon Social:</td>
                     <td>
-                        <asp:TextBox ID="TextBox12" runat="server" Width="300px"></asp:TextBox>
+                        <asp:TextBox ID="txtRazon_E" runat="server" Width="300px"></asp:TextBox>
                     </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -372,7 +367,7 @@
                 <tr>
                     <td class="auto-style15">*Ruc:</td>
                     <td>
-                        <asp:TextBox ID="TextBox13" runat="server" Width="300px"></asp:TextBox>
+                        <asp:TextBox ID="txtRuc_E" runat="server" Width="300px"></asp:TextBox>
                     </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -383,7 +378,7 @@
                 <tr>
                     <td class="auto-style13">*Correo Electronico:</td>
                     <td>
-                        <asp:TextBox ID="TextBox14" runat="server" Width="300px"></asp:TextBox>
+                        <asp:TextBox ID="txtCorreo_E" runat="server" Width="300px"></asp:TextBox>
                     </td>
                     <td></td>
                     <td></td>
@@ -394,7 +389,7 @@
                 <tr>
                     <td class="auto-style15">*Departamento:</td>
                     <td>
-                        <asp:DropDownList ID="DropDownList4" runat="server" Width="200px">
+                        <asp:DropDownList ID="cboDepartamento_E" runat="server" Width="200px">
                         </asp:DropDownList>
                     </td>
                     <td>&nbsp;</td>
@@ -406,7 +401,7 @@
                 <tr>
                     <td class="auto-style15">*Provincia:</td>
                     <td>
-                        <asp:DropDownList ID="DropDownList5" runat="server" Width="200px">
+                        <asp:DropDownList ID="cboProvincia_E" runat="server" Width="200px">
                         </asp:DropDownList>
                     </td>
                     <td>&nbsp;</td>
@@ -418,7 +413,7 @@
                 <tr>
                     <td class="auto-style15">*Distrito:</td>
                     <td>
-                        <asp:DropDownList ID="DropDownList6" runat="server" Width="200px">
+                        <asp:DropDownList ID="cboDistrito_E" runat="server" Width="200px">
                         </asp:DropDownList>
                     </td>
                     <td>&nbsp;</td>
@@ -450,7 +445,7 @@
                 <tr>
                     <td class="auto-style15">Contraseña:</td>
                     <td>
-                        <asp:TextBox ID="TextBox15" runat="server" Width="200px"></asp:TextBox>
+                        <asp:TextBox ID="txtContrasena_E" runat="server" Width="200px"></asp:TextBox>
                     </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -461,7 +456,7 @@
                 <tr>
                     <td class="auto-style15">Repetir Contraseña:</td>
                     <td>
-                        <asp:TextBox ID="TextBox16" runat="server" Width="200px"></asp:TextBox>
+                        <asp:TextBox ID="txtContrasena2_E" runat="server" Width="200px"></asp:TextBox>
                     </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
