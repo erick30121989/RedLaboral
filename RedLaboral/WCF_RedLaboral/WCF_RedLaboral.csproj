@@ -91,6 +91,7 @@
     <Content Include="OfertaLaboralService.svc" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="ServicioRedLab.svc" />
     <Content Include="ServicioCarrera.svc" />
     <Content Include="ServicioDistrito.svc" />
     <Content Include="ServicioEmpresa.svc" />
@@ -107,8 +108,10 @@
   <ItemGroup>
     <Compile Include="Conexion.cs" />
     <Compile Include="Dominio\OfertaLaboral.cs" />
+    <Compile Include="Dominio\RedLaboral.cs" />
     <Compile Include="Errores\OfertaLaboralExceptions.cs" />
     <Compile Include="IOfertaLaboralService.cs" />
+    <Compile Include="IService1.cs" />
     <Compile Include="IServicioCarrera.cs" />
     <Compile Include="IServicioDistrito.cs" />
     <Compile Include="IServicioEmpresa.cs" />
@@ -119,12 +122,16 @@
     <Compile Include="IServicioPuesto.cs" />
     <Compile Include="IServicioPuntuacionBlanda.cs" />
     <Compile Include="IServicioPuntuacionDura.cs" />
+    <Compile Include="IServicioRedLab.cs" />
     <Compile Include="IServicioTrabajo.cs" />
     <Compile Include="OfertaLaboralService.svc.cs">
       <DependentUpon>OfertaLaboralService.svc</DependentUpon>
     </Compile>
     <Compile Include="Persistencia\OfertaLaboralDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServicioRedLab.svc.cs">
+      <DependentUpon>ServicioRedLab.svc</DependentUpon>
+    </Compile>
     <Compile Include="ServicioCarrera.svc.cs">
       <DependentUpon>ServicioCarrera.svc</DependentUpon>
     </Compile>

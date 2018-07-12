@@ -42,23 +42,23 @@
             <td class="auto-style6">
                 <strong>Puesto</strong></td>
             <td class="auto-style3">
-                <asp:DropDownList ID="DropDownList1" runat="server" Height="20px" Width="160px">
+                <asp:DropDownList ID="ddlPuesto" runat="server" Height="20px" Width="160px">
                 </asp:DropDownList>
             </td>
             <td class="auto-style4">
                 <strong>Tipo de Contrato</strong></td>
             <td class="auto-style5">
-                <asp:DropDownList ID="DropDownList2" runat="server" Height="19px" Width="161px">
+                <asp:DropDownList ID="ddlContrato" runat="server" Height="19px" Width="161px">
                 </asp:DropDownList>
             </td>
             <td>
-                <asp:Button ID="Button1" runat="server" Text="Buscar" />
+                <asp:Button ID="Button1" runat="server" Text="Buscar" OnClick="Button1_Click" />
             </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style2" colspan="6">
-                <asp:GridView ID="GridView1" runat="server" Height="150px" Width="484px">
+                <asp:GridView ID="dgvRed" runat="server" Height="150px" Width="484px">
                 </asp:GridView>
             </td>
         </tr>

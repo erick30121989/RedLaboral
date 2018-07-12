@@ -5,7 +5,7 @@
         .auto-style1 {
             width: 100%;
         }
-        .auto-style2 {
+        .auto-style2 {            height: 23px;
         }
         .auto-style3 {
             width: 259px;
@@ -42,24 +42,24 @@
             <td class="auto-style6">
                 <strong>Cargo</strong></td>
             <td class="auto-style3">
-                <asp:DropDownList ID="DropDownList1" runat="server">
+                <asp:DropDownList ID="ddlPuesto" runat="server">
                 </asp:DropDownList>
             </td>
             <td class="auto-style4">
                 <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
             </td>
             <td class="auto-style5">
-                <asp:DropDownList ID="DropDownList2" runat="server">
+                <asp:DropDownList ID="ddlContrato" runat="server">
                 </asp:DropDownList>
             </td>
             <td>
-                <asp:Button ID="Button1" runat="server" Text="Button" />
+                <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
             </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style2" colspan="6">
-                &nbsp;</td>
+                </td>
         </tr>
         <tr>
             <td class="auto-style6">&nbsp;</td>
