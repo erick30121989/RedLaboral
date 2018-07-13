@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServicioDistrito" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:55953/ServicioDistrito.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:55953/ServicioDistrito.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:55953/ServicioDistrito.svc?xsd=xsd2" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServicioDistrito_ListarDepartamento_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarDepartamento" />
+  </wsdl:message>
+  <wsdl:message name="IServicioDistrito_ListarDepartamento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarDepartamentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioDistrito_ListarProvincia_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarProvincia" />
+  </wsdl:message>
+  <wsdl:message name="IServicioDistrito_ListarProvincia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarProvinciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioDistrito_ListarDistrito_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarDistrito" />
+  </wsdl:message>
+  <wsdl:message name="IServicioDistrito_ListarDistrito_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarDistritoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioDistrito_ObtenerDepartamento_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDepartamento" />
+  </wsdl:message>
+  <wsdl:message name="IServicioDistrito_ObtenerDepartamento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDepartamentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioDistrito_ObtenerProvincia_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerProvincia" />
+  </wsdl:message>
+  <wsdl:message name="IServicioDistrito_ObtenerProvincia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerProvinciaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServicioDistrito">
+    <wsdl:operation name="ListarDepartamento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioDistrito/ListarDepartamento" message="tns:IServicioDistrito_ListarDepartamento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioDistrito/ListarDepartamentoResponse" message="tns:IServicioDistrito_ListarDepartamento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarProvincia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioDistrito/ListarProvincia" message="tns:IServicioDistrito_ListarProvincia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioDistrito/ListarProvinciaResponse" message="tns:IServicioDistrito_ListarProvincia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarDistrito">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioDistrito/ListarDistrito" message="tns:IServicioDistrito_ListarDistrito_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioDistrito/ListarDistritoResponse" message="tns:IServicioDistrito_ListarDistrito_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDepartamento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioDistrito/ObtenerDepartamento" message="tns:IServicioDistrito_ObtenerDepartamento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioDistrito/ObtenerDepartamentoResponse" message="tns:IServicioDistrito_ObtenerDepartamento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProvincia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioDistrito/ObtenerProvincia" message="tns:IServicioDistrito_ObtenerProvincia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioDistrito/ObtenerProvinciaResponse" message="tns:IServicioDistrito_ObtenerProvincia_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServicioDistrito" type="tns:IServicioDistrito">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ListarDepartamento">
+      <soap:operation soapAction="http://tempuri.org/IServicioDistrito/ListarDepartamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarProvincia">
+      <soap:operation soapAction="http://tempuri.org/IServicioDistrito/ListarProvincia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarDistrito">
+      <soap:operation soapAction="http://tempuri.org/IServicioDistrito/ListarDistrito" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDepartamento">
+      <soap:operation soapAction="http://tempuri.org/IServicioDistrito/ObtenerDepartamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProvincia">
+      <soap:operation soapAction="http://tempuri.org/IServicioDistrito/ObtenerProvincia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicioDistrito">
+    <wsdl:port name="BasicHttpBinding_IServicioDistrito" binding="tns:BasicHttpBinding_IServicioDistrito">
+      <soap:address location="http://localhost:55953/ServicioDistrito.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
